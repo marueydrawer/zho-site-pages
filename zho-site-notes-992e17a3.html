@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>熊猫体育 · 专题介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+      background-color: #f8f5f1;
+      color: #1f1f1f;
+      line-height: 1.65;
+    }
+
+    /* —— 深色头图 —— */
+    .hero {
+      background: linear-gradient(145deg, #0b1b1a 0%, #1d3a37 100%);
+      color: #e7ece7;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 80%, rgba(220, 190, 140, 0.08), transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 350;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+      color: #eeeae2;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero .subhead {
+      font-size: 1.1rem;
+      max-width: 640px;
+      margin: 0 auto;
+      opacity: 0.8;
+      font-weight: 300;
+    }
+
+    .hero .subhead strong {
+      font-weight: 500;
+      opacity: 1;
+      color: #d7cdb0;
+    }
+
+    /* —— 浅色正文区 —— */
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 3.5rem;
+    }
+
+    .intro-block {
+      margin-bottom: 2.4rem;
+    }
+
+    .intro-block p {
+      margin-bottom: 1.3rem;
+      font-size: 1.05rem;
+      color: #2b2b2b;
+    }
+
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      line-height: 1.75;
+      border-left: 4px solid #ad8b6a;
+      padding-left: 1.2rem;
+      background: #f0ebe4;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 1.8rem;
+      color: #1f2a28;
+    }
+
+    .feature-note {
+      background: #ffffff;
+      border: 1px solid #e0d8ce;
+      border-radius: 14px;
+      padding: 1.8rem 2rem;
+      margin: 2.2rem 0 2.8rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .feature-note h2 {
+      font-size: 1.4rem;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+      color: #2d4b47;
+    }
+
+    .feature-note ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+    }
+
+    .feature-note li {
+      flex: 1 1 200px;
+      padding-left: 1.2rem;
+      position: relative;
+      color: #2f3e3b;
+    }
+
+    .feature-note li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #ad8b6a;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .faq-preview {
+      background: transparent;
+      border-top: 1px solid #dad2c6;
+      border-bottom: 1px solid #dad2c6;
+      padding: 1.5rem 0;
+      margin: 2.5rem 0;
+    }
+
+    .faq-preview details {
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-preview summary {
+      font-weight: 480;
+      cursor: pointer;
+      color: #2b4943;
+      font-size: 1.08rem;
+      padding: 0.4rem 0;
+      transition: color 0.2s;
+    }
+
+    .faq-preview summary:hover {
+      color: #a47e5c;
+    }
+
+    .faq-preview details p {
+      padding: 0.5rem 0 0.2rem 1rem;
+      color: #3b4a47;
+      border-left: 2px solid #cbb79e;
+      margin-top: 0.2rem;
+      font-size: 0.98rem;
+    }
+
+    .closing-note {
+      margin-top: 2.8rem;
+      font-size: 1.05rem;
+      padding: 1.2rem 1.5rem;
+      background: #ede7de;
+      border-radius: 30px;
+      text-align: center;
+      color: #1d2d2a;
+    }
+
+    .closing-note a {
+      color: #2e5b52;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #b3977a;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    .closing-note a:hover {
+      color: #a6714a;
+      text-decoration-color: #a6714a;
+    }
+
+    /* —— 强调色链接（正文中） —— */
+    a {
+      color: #2e5b52;
+      font-weight: 450;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color: #c9b096;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #a6714a;
+    }
+
+    .wordmark {
+      display: inline-block;
+      background: #e1d7cb;
+      color: #1f2a26;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 450;
+      letter-spacing: 0.03em;
+    }
+
+    /* —— 响应式 —— */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        padding: 3.5rem 1rem 2.8rem;
+      }
+      .container {
+        padding: 1.8rem 1rem 2.5rem;
+      }
+      .feature-note {
+        padding: 1.4rem 1.2rem;
+      }
+      .feature-note ul {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .lead {
+        font-size: 1.05rem;
+        padding-left: 1rem;
+      }
+      .closing-note {
+        font-size: 0.98rem;
+        padding: 1rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>熊猫体育 · 杂志专题</h1>
+    <p class="subhead">
+      一处围绕<strong>熊猫体育</strong>展开的内容站点，<br>
+      记录赛事、动向与日常观察。
+    </p>
+  </header>
+
+  <main class="container">
+
+    <section class="intro-block">
+
+      <p class="lead">
+        最初注意到这个域名，是因为它把“熊猫”和“体育”连在了一起。后来陆续读了上面的几篇短文，发现它并不追求轰动，而是在安静地整理一些与体育有关的记录。
+      </p>
+
+      <p>
+        网站本身没有多余的装饰，版式干净，文字也偏朴素。从首页到内文，能感觉到运营者更在意内容的可信与平稳。没有弹窗，没有夸张的标语，甚至很少出现号召性的句子。这种克制在如今的体育类站点里，反倒显得有点特别。
+      </p>
+
+      <p>
+        我把它当做一个可以慢慢翻阅的笔记来看。每一篇都像是一个人坐在看台角落，把看到的、想到的写下来，然后贴到墙上。没有太多后期加工，也不刻意煽情。
+      </p>
+    </section>
+
+    <div class="feature-note">
+      <h2>站点印象</h2>
+      <ul>
+        <li>内容以赛事回顾、运动项目介绍为主</li>
+        <li>文字风格平实，叙述多于评论</li>
+        <li>没有广告干扰，阅读体验连贯</li>
+        <li>更新节奏稳定，篇幅适中</li>
+      </ul>
+    </div>
+
+    <section class="intro-block">
+      <p>
+        这个站点的另一个特点是，它不太主动解释自己。没有“关于我们”的长篇大论，也没有团队介绍。你只能通过一篇篇文章去拼凑它的背景。这种留白让人反而更愿意去读内容本身。
+      </p>
+      <p>
+        体育本身是充满变数的，但记录可以是安静的。<a href="https://zho-site-pandasports.com">熊猫体育</a>给我的感觉就是这样——它选择了一个很轻的角度，不制造焦虑，也不贩卖热血。它只是在那里，定期更新，保持着某种节奏。
+      </p>
+    </section>
+
+    <div class="faq-preview">
+      <details>
+        <summary>这个网站适合什么样的人浏览？</summary>
+        <p>适合喜欢不带立场、不赶热度的体育阅读者。内容偏向记录而非争论，适合随手翻开一页。</p>
+      </details>
+      <details>
+        <summary>内容主要涉及哪些运动项目？</summary>
+        <p>目前以团体球类、田径和部分户外运动为主，偶尔会涉及赛事规则或历史背景的梳理。</p>
+      </details>
+      <details>
+        <summary>站内是否有互动或评论功能？</summary>
+        <p>没有开放评论区，也没有社交分享按钮。整个站点更像一本公开的私人笔记，读者只需要阅读。</p>
+      </details>
+    </div>
+
+    <section class="intro-block">
+      <p>
+        如果你也在找一个可以安静读点体育内容的地方，或许可以试试打开这个站点，从最新的那篇读起。不用带着目的，就像翻一本旧杂志。
+      </p>
+    </section>
+
+    <div class="closing-note">
+      <span>了解更多关于</span>
+      <a href="https://zho-site-pandasports.com">熊猫体育</a>
+      <span>的内容，直接访问站点即可。</span>
+    </div>
+
+  </main>
+
+</body>
+</html>
