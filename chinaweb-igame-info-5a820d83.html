@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 从容选择，自在体验</title>
+    <style>
+        /* 重置 & 基础 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #fbfbfb;
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 48px 0 80px;
+        }
+        /* 顶部导航 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .site-brand {
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            color: #1e1e1e;
+        }
+        .site-brand span { color: #e85d3a; }
+        .nav-links a {
+            margin-left: 24px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            color: #555;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #1e1e1e; }
+        /* 主引导区 + 核心介绍 */
+        .hero {
+            margin: 48px 0 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.4px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .hero h1 i { font-style: normal; background: linear-gradient(135deg, #e85d3a 0%, #b84a2d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p {
+            font-size: 1.05rem;
+            color: #4a4a4a;
+            max-width: 640px;
+            margin-bottom: 12px;
+        }
+        .hero .highlight-link {
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+        .highlight-link a {
+            color: #e85d3a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border 0.2s;
+        }
+        .highlight-link a:hover { border-bottom-color: #e85d3a; }
+        /* 三个场景模块 */
+        .scenes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0 36px;
+        }
+        .scene-card {
+            flex: 1 1 220px;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px 20px 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 8px 20px rgba(0,0,0,0.02);
+            border: 1px solid #efefef;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .scene-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+        .scene-card .emoji-badge {
+            display: inline-block;
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        .scene-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        .scene-card p {
+            font-size: 0.92rem;
+            color: #5a5a5a;
+        }
+        /* 常见说明 (FAQ 摘要) */
+        .faq-summary {
+            margin: 32px 0 24px;
+        }
+        .faq-summary h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: #1a1a1a;
+        }
+        .faq-item {
+            padding: 14px 0;
+            border-bottom: 1px solid #ececec;
+        }
+        .faq-item:last-of-type { border-bottom: none; }
+        .faq-question {
+            font-weight: 500;
+            font-size: 1.02rem;
+            color: #2c2c2c;
+            margin-bottom: 6px;
+        }
+        .faq-answer {
+            font-size: 0.95rem;
+            color: #5e5e5e;
+        }
+        .faq-answer a {
+            color: #e85d3a;
+            text-decoration: none;
+            font-weight: 450;
+        }
+        .faq-answer a:hover { text-decoration: underline; }
+        /* 底部细线 */
+        .footer-note {
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid #eaeaea;
+            font-size: 0.85rem;
+            color: #8a8a8a;
+            text-align: center;
+        }
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .container { padding: 28px 0 60px; }
+            .hero h1 { font-size: 1.8rem; }
+            nav { flex-wrap: wrap; row-gap: 6px; }
+            .nav-links a { margin-left: 16px; font-size: 0.85rem; }
+            .scenes { flex-direction: column; gap: 16px; }
+            .scene-card { flex: 1 1 auto; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 顶部导航 -->
+    <nav>
+        <div class="site-brand"><span>爱</span>游戏 · 日常</div>
+        <div class="nav-links">
+            <a href="#">场景</a>
+            <a href="#">说明</a>
+            <a href="#">随想</a>
+        </div>
+    </nav>
+
+    <!-- Hero & 核心介绍 -->
+    <div class="hero">
+        <h1>玩点什么，<i>爱游戏</i> 给你一个自然的理由</h1>
+        <p>
+            工作间隙、通勤路上、或者只是某个不想出门的周末——打开 <a href="https://chinaweb-igame.com" style="color:#e85d3a; text-decoration: none; font-weight: 500;">爱游戏</a>，你会发现适合当下心情的选择。没有喧哗的弹窗，也没有复杂的规则轰炸，只有清晰分类和真诚推荐。
+        </p>
+        <p>
+            我们相信，真正好的游戏平台应该像一本翻不完的有趣杂志：每一页都让人想多停留一会儿。从轻量解谜到策略模拟，从多人派对到独自沉浸——<span class="highlight-link"><a href="https://chinaweb-igame.com">爱游戏</a></span> 帮你把碎片时间变成一小段属于自己的故事。
+        </p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="scenes">
+        <div class="scene-card">
+            <div class="emoji-badge">☕</div>
+            <h3>通勤片刻</h3>
+            <p>地铁、公交、咖啡馆等位的几分钟，适合打开一局轻巧的休闲游戏。不用教程，点开即玩，刚刚好填满短暂的空隙。</p>
+        </div>
+        <div class="scene-card">
+            <div class="emoji-badge">📚</div>
+            <h3>独处时光</h3>
+            <p>周末午后，热茶或冰饮，一个人安安静静地沉浸在叙事或模拟世界里。细节丰满，节奏由你掌控。</p>
+        </div>
+        <div class="scene-card">
+            <div class="emoji-badge">🎲</div>
+            <h3>朋友小聚</h3>
+            <p>派对、客厅、屏幕前，几个人一起热热闹闹地玩点合作或对抗。规则简单，笑声自然就来了。</p>
+        </div>
+    </div>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <div class="faq-summary">
+        <h2>一些你可能想知道的</h2>
+        <div class="faq-item">
+            <div class="faq-question">爱游戏 适合完全没经验的人吗？</div>
+            <div class="faq-answer">当然。很多游戏都提供了直观的引导，而且平台上的内容偏向轻松上手。你不需要成为高手，只要愿意试试看。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">需要下载额外软件或注册吗？</div>
+            <div class="faq-answer">大部分内容在浏览器内可直接运行，无需安装。部分功能可能需要简单注册，但不影响你浏览和体验。如果你想了解更多，可以去 <a href="https://chinaweb-igame.com">爱游戏</a> 站点内确认细节。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">场景分类会不会很局限？</div>
+            <div class="faq-answer">分类只是提供一种视角，你可以随时跨出场景，按照自己的兴趣探索。平台上的内容远比三个标签丰富。</div>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="footer-note">
+        © 爱游戏 · 轻松选择，认真对待每一次体验
+    </div>
+</div>
+</body>
+</html>
