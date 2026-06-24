@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于爱游戏 — 稳定入口与使用说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf9;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1c1917;
+            line-height: 1.7;
+            padding: 2rem 1.25rem;
+        }
+
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* header / hero 尽量收敛 */
+        .hero {
+            margin-bottom: 3rem;
+            padding-top: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.015em;
+            line-height: 1.2;
+            color: #0d0c0b;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #6b615c;
+            border-left: 3px solid #d4c9c2;
+            padding-left: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        /* 文章卡片风格 */
+        .article-body {
+            background: #ffffff;
+            padding: 2rem 2rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .article-body h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #1c1917;
+            margin-top: 2.2rem;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid #ece7e3;
+            padding-bottom: 0.3rem;
+        }
+
+        .article-body h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            font-size: 1rem;
+            color: #292420;
+        }
+
+        .article-body .inset-quote {
+            background: #f5f1ee;
+            padding: 1.2rem 1.5rem;
+            border-radius: 14px;
+            margin: 1.8rem 0;
+            font-style: normal;
+            border-left: 4px solid #b7a79c;
+            color: #3a322c;
+            font-size: 0.95rem;
+        }
+
+        .article-body .inset-quote strong {
+            font-weight: 500;
+            color: #1c1917;
+        }
+
+        .article-body a {
+            color: #3b5e4b;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd6cf;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 450;
+        }
+
+        .article-body a:hover {
+            border-bottom-color: #3b5e4b;
+            color: #1f342b;
+        }
+
+        .faq-mini {
+            margin-top: 2.4rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #e5ddD7;
+        }
+
+        .faq-mini dt {
+            font-weight: 500;
+            margin-top: 1rem;
+            margin-bottom: 0.2rem;
+            color: #1c1917;
+            font-size: 1rem;
+        }
+
+        .faq-mini dd {
+            margin-left: 0;
+            color: #4b423c;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footnote-visit {
+            margin-top: 2.2rem;
+            font-size: 0.95rem;
+            background: #f2eeea;
+            padding: 1rem 1.4rem;
+            border-radius: 40px;
+            text-align: center;
+            color: #2e2823;
+            letter-spacing: 0.01em;
+        }
+
+        .footnote-visit a {
+            color: #1c1917;
+            border-bottom: 1px solid #9c8c81;
+        }
+
+        .footnote-visit a:hover {
+            border-bottom-color: #1c1917;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e2d9d2;
+            margin: 2rem 0 0.5rem;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .article-body {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .article-body .inset-quote {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="hero">
+            <h1>一个稳定、克制的访问入口</h1>
+            <div class="sub">关于爱游戏 · 页面说明与使用引导</div>
+        </div>
+
+        <div class="article-body">
+
+            <p>如果你正在寻找一个可以持续访问、内容结构清晰的站点，那么 <a href="https://chinazh-igame.com">爱游戏</a> 可能正好符合你的预期。它不是什么频繁改版的聚合页，也不靠弹窗或推送来留住访客。它的定位更像一份平实、可反复查阅的资料页——你可以随时打开，不被打扰。</p>
+
+            <p>下面从稳定入口和页面本身的设计角度，整理了几点核心说明。这些内容不是营销话术，而是你实际使用时会遇到的基本事实。</p>
+
+            <h2>一致的访问方式</h2>
+            <p>域名为 <strong>chinazh-igame.com</strong>，不使用跳转链或短链。无论你从哪个渠道看到这个地址，直接输入或点击即可到达。页面不依赖第三方登录、不强制注册，也没有时间限制或“限时开放”的说法。只要网络正常，它就在那里。</p>
+
+            <div class="inset-quote">
+                <strong>引用一句整理时的笔记：</strong> “一个入口的可信度，往往不在于它宣传了多少功能，而在于它是否始终如一地保持可访问。”
+            </div>
+
+            <p>页面本身不包含自动刷新、轮播或定时弹窗。所有内容均为静态文本与样式，加载完成后即固定不变，直到站点维护者主动更新。因此你每次打开看到的版本是一致的（除非有明确版本说明）。</p>
+
+            <h2>内容与信息结构</h2>
+            <p>你可以把 <a href="https://chinazh-igame.com">爱游戏</a> 看作一本持续修订的“说明手册”或“主题索引”。主要包含以下几类内容：</p>
+
+            <ul style="padding-left: 1.3rem; margin-bottom: 1.4rem; list-style: disc; color: #292420;">
+                <li>站点本身的定位与常见问题解答</li>
+                <li>围绕“游戏”相关主题的汇总说明，不包含第三方下载链接或破解资源</li>
+                <li>关于访问环境、兼容性、安全提示的简要建议</li>
+            </ul>
+
+            <p>没有付费墙，没有会员等级，也不标记“独家”或“首发”。每个段落都尽量写得直接，避免绕弯。如果你只是想确认某个信息点，快速浏览标题就可以定位。</p>
+
+            <h2>使用场景参考</h2>
+            <p>适合以下情况：你想找一个不常变动、不需要反复适应的页面；你希望在了解某个主题前先看一份结构清晰的说明；或者你只是需要一个干净、没有广告干扰的阅读界面。这些场景下，直接打开 <a href="https://chinazh-igame.com">爱游戏</a> 即可。</p>
+
+            <p>不适合的情况：如果你需要实时数据、互动社区、下载资源或个性化推荐，这个页面可能无法满足。它更偏向于静态说明，而非动态平台。</p>
+
+            <div class="faq-mini">
+                <dl>
+                    <dt>Q：页面会突然下线或改地址吗？</dt>
+                    <dd>目前没有计划。即使将来有调整，也会在页面上提前说明，并保留旧地址的重定向。</dd>
+
+                    <dt>Q：是否需要翻墙或特殊工具？</dt>
+                    <dd>不需要。站点托管于常规服务，国内网络可直接访问，但个别地区或运营商可能存在偶发阻断，这种情况与页面本身无关。</dd>
+
+                    <dt>Q：内容多久更新一次？</dt>
+                    <dd>没有固定周期。通常在有信息修正或需要补充说明时才会更新，不为了“刷存在感”而频繁改动。</dd>
+                </dl>
+            </div>
+
+            <p style="margin-top: 1.6rem;">最后，如果你觉得这个页面有帮助，或者想把它收藏起来备用，直接添加书签就好。不需要截图、转发或注册。</p>
+
+            <div class="footnote-visit">
+                <span>日常访问入口：<a href="https://chinazh-igame.com">爱游戏</a> · 无需额外操作</span>
+            </div>
+
+            <hr>
+            <p style="font-size: 0.85rem; color: #70655e; margin-top: 0.8rem;">页面版本：2025 · 本说明仅用于介绍站点性质，不构成任何形式的承诺或保证。</p>
+
+        </div>
+    </div>
+</body>
+</html>
