@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 从故事到场景</title>
+  <style>
+    /* 极简留白 · 窄正文 · 清晰层级 */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Helvetica Neue", sans-serif;
+      background-color: #fbfbfb;
+      color: #1e1e24;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      padding: 96px 0 56px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 2px;
+      background: #d4d4dc;
+      margin: 40px auto 0;
+      border-radius: 1px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 350;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #131318;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(120deg, #3b3b48 0%, #5e5e6f 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #5a5a66;
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* ---------- 优势 / 说明卡片 ---------- */
+    .section {
+      padding: 56px 0 32px;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #8b8b9c;
+      margin-bottom: 28px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02), 0 4px 16px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.04);
+      transform: translateY(-2px);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 550;
+      margin-bottom: 10px;
+      color: #1a1a22;
+    }
+
+    .card p {
+      font-size: 0.94rem;
+      color: #4f4f5c;
+      line-height: 1.6;
+    }
+
+    /* ---------- 说明区（长文本） ---------- */
+    .text-block {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 36px;
+      margin: 16px 0 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02), 0 4px 16px rgba(0,0,0,0.02);
+    }
+
+    .text-block p {
+      margin-bottom: 1.2em;
+      font-size: 1rem;
+      color: #333340;
+    }
+
+    .text-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .text-block a {
+      color: #3a3a4f;
+      text-decoration: none;
+      border-bottom: 1px solid #cbcbd4;
+      transition: border-color 0.2s, color 0.15s;
+    }
+
+    .text-block a:hover {
+      border-bottom-color: #3a3a4f;
+      color: #14141c;
+    }
+
+    /* ---------- FAQ 摘要 ---------- */
+    .faq-item {
+      border-bottom: 1px solid #e8e8ee;
+      padding: 20px 0 18px;
+    }
+
+    .faq-item:first-of-type {
+      padding-top: 0;
+    }
+
+    .faq-question {
+      font-weight: 550;
+      font-size: 1.02rem;
+      color: #1e1e28;
+      margin-bottom: 6px;
+    }
+
+    .faq-answer {
+      font-size: 0.94rem;
+      color: #5b5b6a;
+      line-height: 1.6;
+    }
+
+    /* ---------- 底部 ---------- */
+    .footer {
+      margin-top: 64px;
+      padding: 36px 0 48px;
+      border-top: 1px solid #e6e6ed;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7a7a8a;
+    }
+
+    .footer a {
+      color: #3e3e50;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .footer a:hover {
+      border-bottom-color: #3e3e50;
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 600px) {
+      .container { padding: 0 20px; }
+      .hero { padding: 64px 0 40px; }
+      .hero h1 { font-size: 2rem; }
+      .card-grid { grid-template-columns: 1fr; gap: 16px; }
+      .text-block { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>从叙事到互动<br><em>爱游戏</em> · 理解游戏的可能性</h1>
+    <p>不是每一款游戏都需要被定义。<br>我们关注游戏如何成为日常表达、文化片段与设计语言。</p>
+  </header>
+
+  <!-- 优势区：四个卡片 -->
+  <section class="section">
+    <h2 class="section-title">视野 · 工具 · 语境</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>跨类型观察</h3>
+        <p>从角色扮演到策略模拟，从叙事驱动到抽象机制——游戏形态的多样性本身就是一种语言。</p>
+      </div>
+      <div class="card">
+        <h3>轻量化解读</h3>
+        <p>不说教、不堆砌术语，用平实的视角拆解设计思路、文化线索与体验逻辑。</p>
+      </div>
+      <div class="card">
+        <h3>场景化索引</h3>
+        <p>针对碎片时间、深度沉浸、社交互动等不同场景，提供差异化的游戏选择参考。</p>
+      </div>
+      <div class="card">
+        <h3>审美与反思</h3>
+        <p>游戏不仅是娱乐，也是视觉、音乐、交互艺术的交叉地带——值得被认真看待。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明区 核心内容，内嵌链接 -->
+  <section class="section">
+    <h2 class="section-title">关于“爱游戏”的另一种叙述</h2>
+    <div class="text-block">
+      <p>
+        我们习惯把“玩游戏”看作一件日常小事，但很少有人停下来想一想：游戏究竟在做什么？<br>
+        它让我们在规则内做出选择，在虚构中体验真实情绪，在失败后重新调整策略。这种结构化的自由，恰好是许多其他媒介难以提供的。<strong>爱游戏</strong>这个表达，不在于沉迷或消费，而在于理解一套交互逻辑如何塑造我们的注意力与决策方式。
+      </p>
+      <p>
+        从像素画面到开放世界，从单人剧情到多人协作，游戏工业在技术更迭中不断拓展边界。但作为普通玩家或观察者，我们真正需要的是一个足够清晰、不浮躁的视角。<a href="https://chinese-app-igame.com">爱游戏</a>正是这样一个站点——它不追逐热点，不制造焦虑，而是试图还原游戏作为“互动文本”的本来面貌。无论你是刚接触游戏不久的新人，还是已有多年经验的老玩家，都能在这里找到与自己认知共振的内容。
+      </p>
+      <p>
+        另一方面，游戏也越来越频繁地出现在教育、医疗、品牌传播等领域。严肃游戏、功能游戏、模拟训练……这些词汇背后，是同一个核心命题：如何用引人入胜的交互达成真实世界的目标。如果你对这类跨领域应用感兴趣，不妨在<a href="https://chinese-app-igame.com">爱游戏</a>中探索更多案例与讨论。
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ 摘要 3个条目 -->
+  <section class="section">
+    <h2 class="section-title">常见话题 · 简短回应</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">“爱游戏”主要关注哪些类型的内容？</div>
+      <div class="faq-answer">以电子游戏为介质，涵盖设计思路、文化背景、机制解析与场景应用。不局限于3A大作，同样关注独立作品与实验性项目。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">内容是否包含评测或购买建议？</div>
+      <div class="faq-answer">更偏向观察与分析，而非传统意义上的评测。我们更多提供视角和背景信息，帮助读者建立自己的判断标准。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">信息更新频率与获取方式？</div>
+      <div class="faq-answer">保持稳定更新，具体节奏随专题深度而定。所有内容均可通过网站直接浏览，无需下载额外应用。</div>
+    </div>
+  </section>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <p>
+      <span>更多视角 · 坦诚讨论 ·</span>
+      <a href="https://chinese-app-igame.com">爱游戏</a>
+    </p>
+    <p style="margin-top: 12px; font-size: 0.82rem; color: #9292a0;">没有任何跳转诱导，只有内容本身。</p>
+  </footer>
+</div>
+
+</body>
+</html>
